@@ -1,7 +1,7 @@
 '''Test cases for testing the functionality of DistanceCalculator'''
 
 import unittest
-from rpn_calculator import process
+from .rpn_calculator import process
 
 class TestRPNCalculator(unittest.TestCase):
 
@@ -20,7 +20,7 @@ class TestRPNCalculator(unittest.TestCase):
 
     def test_invalid_equation(self):
         with self.assertRaises(TypeError):
-            process("3 − 4 + 5")
+            process("3 - 4 + 5")
 
 if __name__ == '__main__':
     unittest.main()

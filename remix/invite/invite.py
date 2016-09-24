@@ -3,11 +3,13 @@
    using great-circle distance formula
 '''
 
+import os
 import json
 from math import radians, acos, sin, cos
 
 EARTH_RADIUS = 6371
 
+print(os.path.dirname(os.path.realpath(__file__)))
 class DistanceCalculator(object):
     '''Initializes class with given params, reads the file,
        and prints user_id and name of eligible customers
@@ -39,7 +41,8 @@ class DistanceCalculator(object):
     def fetch_file(self):
         '''Read a file and return list of dict element for each record'''
 
-        with open(self.file_name, "r") as customer_file:
+        cur_dir = os.path.dirname(os.path.realpath(__file__))
+        with open(cur_dir+'/'+self.file_name, "r") as customer_file:
             content = customer_file.readlines()
 
         data = [json.loads(val) for val in content]

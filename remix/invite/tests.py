@@ -1,7 +1,13 @@
 '''Test cases for testing the functionality of DistanceCalculator'''
 
 import unittest
-from invite import DistanceCalculator
+from .invite import DistanceCalculator
+
+try:
+    FileNotFoundError
+except NameError:
+    #py2
+    FileNotFoundError = IOError
 
 class TestDistanceCalculator(unittest.TestCase):
 

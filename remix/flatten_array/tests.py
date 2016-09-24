@@ -1,7 +1,7 @@
 '''Test the flattening object with some inputs'''
 
 import unittest
-from flat import flat
+from .flat import flat
 
 class TestFlat(unittest.TestCase):
 
